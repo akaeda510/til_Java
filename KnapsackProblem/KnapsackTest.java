@@ -13,6 +13,22 @@ public class KnapsackTest {
 			}
 		}
 		return dpCal[budget];
+
+		// 模範回答
+		// int[] dp = new int[budget + 1];
+		//
+		// for (int cost = 0; cost <= budget; cost++) {
+		// 	for (int i = 0; i < costs.length; i++) {
+		// 		if (costs[i] > cost) {
+		// 			continue;
+		// 		}
+		// 		int potentialCal = dp[cost - costs[i]] + calories[i];
+		// 		if (potentialCal > dp[cost]) {
+		// 			dp[cost] = potentialCal;
+		// 		}
+		// 	}
+		// }
+		// return dp[budget];
 	}
 
 	public static void main(String[] args) {
