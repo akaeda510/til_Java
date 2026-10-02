@@ -48,13 +48,13 @@ public class User {
 	@Override
 	public String toString() {
 		if (status == UserStatus.INACTIVE) {
-			return name + "さん。あなたのアカウントは" + status.getLabel() + "なので利用できません";
+			return name + "(" + role.getLabel() +")" + "さん。あなたのアカウントは" + status.getLabel() + "なので利用できません。";
 		} else if (role == UserRole.ADMIN) {
-			return name + "さん" + " (" + role.getLabel() + ")" + "今日もよろしくお願いします。";
+			return name + "(" + role.getLabel() + ")" + "さん。今日もよろしくお願いします。";
 		} else if (role == UserRole.STAFF) {
-			return name + "さん" + " (" + role.getLabel() + ")" + "今日のタスクはこちらです。";
+			return name + "(" + role.getLabel() + ")" + "さん。今日のタスクはこちらです。";
 		}
-		return name + "さん" + " (" + role.getLabel() + ")" + "こんにちは";
+		return name + "(" + role.getLabel() + ")" + "さん。こんにちは。";
 	}
 
 
